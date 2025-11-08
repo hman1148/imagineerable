@@ -1,11 +1,10 @@
 using Amazon.CDK;
-using Constructs;
 
-namespace ServiceEmail.Stacks
+namespace Imagineerable.ServiceEmail.Stacks
 {
     public class ServiceEmailStack : Stack
     {
-        public ServiceEmailStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props)
+        public ServiceEmailStack(Construct scope, string id, IStackProps? props = null) : base(scope, id, props)
         {
             // Define your AWS resources here
             // Example:
