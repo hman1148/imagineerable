@@ -9,13 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- AWS CDK v2 -->
-    <PackageReference Include="Amazon.CDK.Lib" Version="2.222.0" />
-    <PackageReference Include="Constructs" Version="[10.0.0,11.0.0)" />
-
-    <!-- Additional AWS CDK modules for specific services -->
+    <PackageReference Include="Amazon.CDK" Version="1.204.0" />
+    <PackageReference Include="Amazon.CDK.AWS.Cognito" Version="1.204.0" />
     <PackageReference Include="Amazon.CDK.AWS.SES" Version="1.204.0" />
-    <PackageReference Include="Amazon.CDK.AWS.SNS" Version="1.204.0" />
   </ItemGroup>
 
 </Project>
