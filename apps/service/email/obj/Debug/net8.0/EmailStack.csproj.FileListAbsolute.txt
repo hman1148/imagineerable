@@ -1,6 +1,0 @@
-C:\Users\Hunter Peart\Development\imagineerable\apps\service\email\obj\Debug\net8.0\EmailStack.csproj.AssemblyReference.cache
-C:\Users\Hunter Peart\Development\imagineerable\apps\service\email\obj\Debug\net8.0\EmailStack.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Hunter Peart\Development\imagineerable\apps\service\email\obj\Debug\net8.0\EmailStack.AssemblyInfoInputs.cache
-C:\Users\Hunter Peart\Development\imagineerable\apps\service\email\obj\Debug\net8.0\EmailStack.AssemblyInfo.cs
-C:\Users\Hunter Peart\Development\imagineerable\apps\service\email\obj\Debug\net8.0\EmailStack.csproj.CoreCompileInputs.cache
-C:\Users\Hunter Peart\Development\imagineerable\apps\service\email\obj\Debug\net8.0\EmailStack.sourcelink.json

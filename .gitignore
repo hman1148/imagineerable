@@ -25,7 +25,6 @@ node_modules
 !.vscode/extensions.json
 .vs/
 .obj/*
-*.sln
 
 # misc
 /.sass-cache
