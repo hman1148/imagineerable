@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CognitoStack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9536564ed2b41ed728877c626513cdbea57325a3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+119600cc85a4c34dbd3d724780bf4fd48a270fd7")]
 [assembly: System.Reflection.AssemblyProductAttribute("CognitoStack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CognitoStack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
