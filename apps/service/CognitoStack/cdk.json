@@ -1,5 +1,5 @@
 {
-  "app": "dotnet run --project service-EmailStack.csproj",
+  "app": "dotnet run --project service-CognitoStack.csproj",
   "watch": {
     "include": ["**"],
     "exclude": [
