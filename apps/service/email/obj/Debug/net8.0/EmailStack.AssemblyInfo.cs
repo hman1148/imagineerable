@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmailStack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1e7fa9c915030edef6849005816c39db401fb92")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3289beba5b9b874713544a71fbaa739789e7494")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmailStack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmailStack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

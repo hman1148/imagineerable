@@ -52,6 +52,14 @@
             "Amazon.CDK": {
               "target": "Package",
               "version": "[1.204.0, )"
+            },
+            "Amazon.CDK.AWS.SES": {
+              "target": "Package",
+              "version": "[1.204.0, )"
+            },
+            "Amazon.CDK.AWS.SNS": {
+              "target": "Package",
+              "version": "[1.204.0, )"
             }
           },
           "imports": [

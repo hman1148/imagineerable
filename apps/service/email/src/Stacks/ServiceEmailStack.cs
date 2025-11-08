@@ -1,4 +1,6 @@
 using Amazon.CDK;
+using Amazon.CDK.AWS.SES;
+using Amazon.CDK.AWS.SNS;
 
 namespace Imagineerable.ServiceEmail.Stacks
 {
@@ -6,13 +8,18 @@ namespace Imagineerable.ServiceEmail.Stacks
     {
         public ServiceEmailStack(Construct scope, string id, IStackProps? props = null) : base(scope, id, props)
         {
-            // Define your AWS resources here
-            // Example:
-            // var bucket = new Bucket(this, "MyBucket", new BucketProps
-            // {
-            //     Versioned = true,
-            //     Encryption = BucketEncryption.S3_MANAGED
-            // });
+            string emailyIdentity = "";
+
+
+            CfnEmailIdentity domainIdentity = new CfnEmailIdentity(this, "ImagineeringDomainIdentity", new CfnEmailIdentityProps
+            {
+                EmailIdentity = emailyIdentity
+            });
+
+            Topic bounceTopic = new Topic(this, "SesBounceTopic", new TopicProps
+            {
+                DisplayName = "Imagineering Bounce Notifications"
+            });
         }
     }
 }

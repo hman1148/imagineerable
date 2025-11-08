@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <PackageReference Include="Amazon.CDK" Version="1.204.0" />
+    <PackageReference Include="Amazon.CDK.AWS.SES" Version="1.204.0" />
+    <PackageReference Include="Amazon.CDK.AWS.SNS" Version="1.204.0" />
   </ItemGroup>
 
 </Project>
