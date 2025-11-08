@@ -4,8 +4,8 @@ import * as route53 from 'aws-cdk-lib/aws-route53';
 import * as acm from 'aws-cdk-lib/aws-certificatemanager';
 
 /**
- * Stack for creating ACM wildcard certificate in us-east-1 for CloudFront.
- * This stack must be deployed in us-east-1 region.
+ * Stack for creating ACM wildcard certificate in us-west-1 for CloudFront.
+ * This stack must be deployed in us-west-1 region.
  */
 export class CertificateStack extends Stack {
     public readonly wildCertificateArn: string;
@@ -59,7 +59,7 @@ export class CertificateStack extends Stack {
         new CfnOutput(this, 'WildCertificateArn', {
             value: wildCertificate.certificateArn,
             exportName: `${this.stackName}-WildCertificateArn`,
-            description: 'ACM Certificate ARN for Wild domain (us-east-1)',
+            description: 'ACM Certificate ARN for Wild domain (us-west-1)',
         });
     }
 }

@@ -1,0 +1,72 @@
+# <%= projectName %>
+
+C# CDK stack for <%= stackClassName %>.
+
+## Generated with Nx CDK Generator
+
+This project was generated using the `@imagineerable/nx-cdk:csharp-app` generator.
+
+## Project Structure
+
+```
+<%= projectName %>/
+├── src/
+│   ├── Program.cs              # CDK app entry point
+│   └── Stacks/
+│       └── <%= stackClassName %>Stack.cs  # Main stack definition
+├── <%= projectName %>.csproj   # .NET project file
+├── cdk.json                    # CDK configuration
+└── global.json                 # .NET SDK configuration
+```
+
+## Available Commands
+
+All commands are run through Nx:
+
+```bash
+# Build the project
+nx build <%= projectName %>
+
+# Synthesize CloudFormation template
+nx synth <%= projectName %>
+
+# Show differences with deployed stack
+nx diff <%= projectName %>
+
+# Deploy the stack
+nx deploy <%= projectName %>
+
+# Destroy the stack
+nx destroy <%= projectName %>
+
+# Run tests
+nx test <%= projectName %>
+```
+
+## Environment and Sandbox Support
+
+This stack supports environment and sandbox contexts:
+
+```bash
+# Deploy to development environment
+nx deploy <%= projectName %> --env=dev
+
+# Deploy to production
+nx deploy <%= projectName %> --env=prod
+
+# Deploy to a sandbox
+nx deploy <%= projectName %> --env=dev --sandbox=feature-123
+```
+
+## Adding AWS CDK Packages
+
+To add additional AWS CDK packages, edit the `.csproj` file:
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Amazon.CDK.AWS.S3" Version="2.222.0" />
+  <PackageReference Include="Amazon.CDK.AWS.Lambda" Version="2.222.0" />
+</ItemGroup>
+```
+
+Then run `dotnet restore` or `nx build <%= projectName %>`.

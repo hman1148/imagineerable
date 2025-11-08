@@ -1,0 +1,19 @@
+{
+    "extends": "../../../tsconfig.base.json",
+    "compilerOptions": {
+        "outDir": "./out-tsc/jest",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "types": [
+            "jest",
+            "node"
+        ]
+    },
+    "include": [
+        "jest.config.ts",
+        "src/**/*.test.ts",
+        "src/**/*.spec.ts",
+        "src/**/*.d.ts",
+        "src/**/*.ts"
+    ]
+}

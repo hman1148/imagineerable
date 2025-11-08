@@ -16,7 +16,7 @@ describe('<%= className %> AppSync Bridge Stack', () => {
 
     const stack = new AppSyncBridgeStack(app, 'TestStack', {
       env: {
-        region: 'us-east-1',
+        region: 'us-west-1',
         account: '123456789012',
       },
     })

@@ -1,42 +1,48 @@
 {
-  "name": "infrastructure",
+  "name": "framework",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/infrastructure/src",
+  "sourceRoot": "apps/service/framework/src",
   "projectType": "application",
-  "tags": ["type:infrastructure"],
+  "tags": [
+    "type:framework"
+  ],
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/infrastructure",
-        "main": "apps/infrastructure/src/main.ts",
-        "tsConfig": "apps/infrastructure/tsconfig.app.json",
-        "assets": ["apps/infrastructure/src/assets"]
+        "outputPath": "dist/apps/framework",
+        "main": "apps/service/framework/src/main.ts",
+        "tsConfig": "apps/service/framework/tsconfig.app.json",
+        "assets": [
+          "apps/service/framework/src/assets"
+        ]
       }
     },
     "synth": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "cdk synth --app='node dist/apps/infrastructure/main.js'"
+        "command": "cdk synth --app='node dist/apps/framework/src/main.js'"
       }
     },
     "deploy": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "cdk deploy --app='node dist/apps/infrastructure/main.js'"
+        "command": "cdk deploy --all --require-approval never --app='node dist/apps/framework/src/main.js'"
       }
     },
     "destroy": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "cdk destroy --app='node dist/apps/infrastructure/main.js'"
+        "command": "cdk destroy --app='node dist/apps/framework/src/main.js'"
       }
     },
     "diff": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "cdk diff --app='node dist/apps/infrastructure/main.js'"
+        "command": "cdk diff --app='node dist/apps/framework/src/main.js'"
       }
     }
   }

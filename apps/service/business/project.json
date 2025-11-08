@@ -1,0 +1,60 @@
+{
+  "name": "service-business",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/service/business/src",
+  "projectType": "application",
+  "tags": ["type:infrastructure", "lang:csharp", "cdk"],
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/service/business",
+        "commands": ["dotnet build"]
+      }
+    },
+    "diff": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/service/business",
+        "commands": [
+          "NX_ENV={args.env} NX_SANDBOX={args.sandbox} bash -c 'cdk diff --context env=${NX_ENV:-dev} --context sandbox=${NX_SANDBOX:-}'"
+        ]
+      }
+    },
+    "synth": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/service/business",
+        "commands": [
+          "NX_ENV={args.env} NX_SANDBOX={args.sandbox} bash -c 'cdk synth --context env=${NX_ENV:-dev} --context sandbox=${NX_SANDBOX:-}'"
+        ]
+      }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/service/business",
+        "commands": [
+          "NX_ENV={args.env} NX_SANDBOX={args.sandbox} bash -c 'cdk deploy --all --require-approval=never --context env=${NX_ENV:-dev} --context sandbox=${NX_SANDBOX:-}'"
+        ]
+      }
+    },
+    "destroy": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["destroy^"],
+      "options": {
+        "cwd": "apps/service/business",
+        "commands": [
+          "NX_ENV={args.env} NX_SANDBOX={args.sandbox} NX_STACK={args.stack} bash -c 'if [ -n \"${NX_STACK}\" ]; then cdk destroy -f ${NX_STACK} --context env=${NX_ENV:-dev} --context sandbox=${NX_SANDBOX:-}; else cdk destroy --all -f --context env=${NX_ENV:-dev} --context sandbox=${NX_SANDBOX:-}; fi'"
+        ]
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/service/business",
+        "commands": ["dotnet test"]
+      }
+    }
+  }
+}

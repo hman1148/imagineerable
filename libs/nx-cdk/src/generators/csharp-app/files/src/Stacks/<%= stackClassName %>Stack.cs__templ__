@@ -1,0 +1,19 @@
+using Amazon.CDK;
+
+namespace <%= namespace %>.Stacks
+{
+    public class <%= stackClassName %>Stack : Stack
+    {
+        public <%= stackClassName %>Stack(Construct scope, string id, IStackProps? props = null) : base(scope, id, props)
+        {
+            // Define your AWS resources here
+
+            // Example:
+            // var bucket = new Bucket(this, "MyBucket", new BucketProps
+            // {
+            //     Versioned = true,
+            //     RemovalPolicy = RemovalPolicy.DESTROY
+            // });
+        }
+    }
+}

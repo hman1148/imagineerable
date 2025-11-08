@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "CsharpApp",
+  "title": "C# CDK Application Generator",
+  "type": "object",
+  "properties": {
+    "appSubDirectory": {
+      "type": "string",
+      "description": "The subdirectory path for the application",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "Specify the subdirectory for your C# CDK application (will be placed in the applications directory)"
+    },
+    "namespace": {
+      "type": "string",
+      "description": "The root namespace for the C# project (e.g., Imagineerable.ServiceEmail)",
+      "x-prompt": "Specify the root namespace for your C# project"
+    },
+    "implicitDependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Projects this stack depends on (optional). Stack dependencies for deployment ordering.",
+      "x-dropdown": "projects"
+    }
+  },
+  "required": ["appSubDirectory", "namespace"],
+  "additionalProperties": false
+}

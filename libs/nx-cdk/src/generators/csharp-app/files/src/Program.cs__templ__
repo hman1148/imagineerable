@@ -1,0 +1,24 @@
+using Amazon.CDK;
+using <%= namespace %>.Stacks;
+
+App app = new App();
+
+// Get context values
+string env = app.Node.TryGetContext("env")?.ToString() ?? "dev";
+string sandbox = app.Node.TryGetContext("sandbox")?.ToString() ?? "";
+
+// Build stack name
+string stackName = "<%= stackClassName %>-{env}";
+
+if (!string.IsNullOrEmpty(sandbox))
+{
+    stackName = $"{stackName}-{sandbox}";
+}
+
+// Create the stack
+new <%= stackClassName %>Stack(app, stackName, new StackProps
+{
+    Description = $"<%= stackClassName %> stack for {env} environment{(string.IsNullOrEmpty(sandbox) ? "" : $" (sandbox: {sandbox})")}"
+});
+
+app.Synth();

@@ -92,7 +92,7 @@ export class NetworkingStack extends Stack {
         new CfnOutput(this, 'CloudFrontCertificateArn', {
             value: props.cloudFrontCertificateArn,
             exportName: `${this.stackName}-CloudFrontCertificateArn`,
-            description: 'ACM Certificate ARN for CloudFront (us-east-1)',
+            description: 'ACM Certificate ARN for CloudFront (us-west-1)',
         });
 
         new CfnOutput(this, 'RegionalCertificateArn', {
