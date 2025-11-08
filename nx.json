@@ -70,6 +70,23 @@
       "linter": "eslint",
       "style": "scss",
       "unitTestRunner": "jest"
+    },
+    "@imagineerable/nx-cdk": {
+      "blank-app": {
+        "tags": "type:infrastructure"
+      },
+      "api": {
+        "tags": "type:infrastructure"
+      },
+      "lambda-handlers": {
+        "tags": "type:infrastructure"
+      },
+      "graphql-appsync-bridge": {
+        "tags": "type:infrastructure"
+      },
+      "csharp-app": {
+        "tags": "type:infrastructure,lang:csharp"
+      }
     }
   },
   "defaultProject": "imagineerable"

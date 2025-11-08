@@ -1,0 +1,51 @@
+# <%= className %>
+
+C# CDK application for <%= projectName %>.
+
+## Prerequisites
+
+- .NET 8.0 SDK or later
+- AWS CDK CLI (`npm install -g aws-cdk`)
+- AWS credentials configured
+
+## Commands
+
+### Build
+```bash
+nx build <%= projectName %>
+```
+
+### Synthesize CloudFormation template
+```bash
+nx synth <%= projectName %>
+```
+
+### Deploy to AWS
+```bash
+nx deploy <%= projectName %>
+```
+
+### View differences
+```bash
+nx diff <%= projectName %>
+```
+
+### Destroy stack
+```bash
+nx destroy <%= projectName %>
+```
+
+### Run tests
+```bash
+nx test <%= projectName %>
+```
+
+## Context Variables
+
+- `env`: Environment name (default: "dev")
+- `sandbox`: Sandbox identifier (default: "")
+
+Example with custom context:
+```bash
+nx deploy <%= projectName %> --env=prod --sandbox=feature-branch
+```

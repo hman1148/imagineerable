@@ -44,3 +44,71 @@ Thumbs.db
 .github/instructions/nx.instructions.md
 
 .angular
+/.angular/cache
+/.angular/local-cli.json
+/.angular/tsconfig.json
+.angular.json
+
+# AWS CDK
+cdk.out
+.aws-synth
+*.template.json
+cdk.context.json
+
+# AWS CDK - Toolkit
+.aws-cdk
+
+# AWS CDK - VSCode Extension
+.cdk-vscode
+.cdk-stacks.json
+.cdk-outputs.json
+.cdk-params.json
+.cdk.context.json
+.cdk.ignore
+.cdk.out
+
+# C# - Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.csproj.user
+*.pidb
+*.svd
+*.pdb
+*.cache
+*.ilk
+
+# yarn lock
+yarn.lock
+
+# npm lock
+package-lock.json
+npm-debug.log
+yarn-error.log
+.pnpm-debug.log
+lerna-debug.log
+lerna-debug.log.*
+.yarn-integrity
+.pnp.*
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.yarn/patches
+.yarn/plugins
+.yarn/sdks
+.yarn/versions
+
+# dotenv environment variables file
+.env
+.env.*.local
+.env.local
+.env.test
+.env.production
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Local AWS Credentials
+.aws/credentials

@@ -1,0 +1,43 @@
+{
+  "name": "infrastructure",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/infrastructure/src",
+  "projectType": "application",
+  "tags": ["type:infrastructure"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/infrastructure",
+        "main": "apps/infrastructure/src/main.ts",
+        "tsConfig": "apps/infrastructure/tsconfig.app.json",
+        "assets": ["apps/infrastructure/src/assets"]
+      }
+    },
+    "synth": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cdk synth --app='node dist/apps/infrastructure/main.js'"
+      }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cdk deploy --app='node dist/apps/infrastructure/main.js'"
+      }
+    },
+    "destroy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cdk destroy --app='node dist/apps/infrastructure/main.js'"
+      }
+    },
+    "diff": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cdk diff --app='node dist/apps/infrastructure/main.js'"
+      }
+    }
+  }
+}
